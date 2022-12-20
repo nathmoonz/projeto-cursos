@@ -90,7 +90,7 @@ header {
     margin-bottom: 3em;
 }
 
-.img-desktop {
+.img-desktop, .img-tablet {
     display: none;
 }
 
@@ -159,9 +159,110 @@ footer {
 }
 
 .logo-footer {
+    font-size: 1.9em;
     color: white;
 }
 
 .botao-footer {
     background-image: linear-gradient(to top,#c236bd, #5e4bf4);
+}
+                 /* TABLET SCREEN */
+@media screen and (min-width:600px) {
+    
+
+    header,main {
+        width: 100vw;
+        padding: 3em;
+        box-sizing: content-box;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    .logo-header {
+        font-size:3em;
+    }
+
+    .botao-header {
+        font-size: 1.5em;
+    }
+    .img-mobile {
+        display: none;
+    }
+    
+    .img-desktop {
+        display: none;
+    }
+
+    .site-description {
+        display: flex;
+    }
+
+    .topo-title {
+        font-size: 3em;
+        width: 60vw;
+    }
+
+    .topo-description {
+        width: 50vw;
+        font-size: 1.3em;
+        line-height: 35px;
+    }
+
+    .botao-topo {
+        font-size: 1.3em;
+        padding: 1.2em 2.3em;
+    }
+    .imagem {
+        position: relative;
+        bottom: 70px;
+        left: -90px;
+    }
+
+    .img-tablet {
+            display: block;
+            width: 30em;
+        }
+
+    .all-courses {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+       "checkout curso-animation"
+       "curso-design curso-photo"
+       "curso-crypto curso-business";
+    }
+
+    .checkout {
+        margin: 0;
+        padding-top: 2em;
+       grid-area: checkout;
+    }
+
+    .curso-animation {
+        grid-area: curso-animation;
+    }
+
+    .curso-design {
+        grid-area: curso-design;
+    }
+
+    .curso-photo {
+        grid-area: curso-photo;
+    }
+
+    .curso-crypto {
+        grid-area: curso-crypto;
+    }
+
+    .curso-business {
+        grid-area: curso-business;
+    }
+    
+    
 }
