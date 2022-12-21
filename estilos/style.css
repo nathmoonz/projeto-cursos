@@ -24,6 +24,10 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     background-image: linear-gradient(to top, #eceffe, white
     );
@@ -169,11 +173,15 @@ footer {
                  /* TABLET SCREEN */
 @media screen and (min-width:600px) {
     
+    body {
+        margin: 0;
+    }
 
     header,main {
-        width: 100vw;
-        padding: 3em;
-        box-sizing: content-box;
+        width: 100%;
+        padding: 2em;
+        
+       
     }
 
     header {
@@ -216,15 +224,22 @@ footer {
         font-size: 1.3em;
         padding: 1.2em 2.3em;
     }
-    .imagem {
+
+    .site-description {
         position: relative;
-        bottom: 70px;
-        left: -90px;
     }
+    .img-container {
+        position: absolute;
+        bottom: 5em;
+        left: 24em;
+        width: 26em;
+    }
+
+
 
     .img-tablet {
             display: block;
-            width: 30em;
+            max-width: 100%;
         }
 
     .all-courses {
@@ -264,5 +279,81 @@ footer {
         grid-area: curso-business;
     }
     
+    .footer {
+        padding: 0 50em;
+        width: 100vw;
+    }
     
+}
+
+@media screen and (min-width:850px) {
+
+    main,header {
+        max-width: 100%;
+        padding: 1.5em 4em 4em 4em;
+    }
+    .logo-header {
+    font-size: 1.8em;
+    }
+
+    .botao-header {
+        font-size: 1em;
+    }
+
+    .img-tablet {
+        display: none;
+    }
+
+    .img-desktop {
+        width: 100%;
+        display: block;
+    }
+
+    .img-container {
+        position: absolute;
+        bottom: 1em;
+        left: 35em;
+        width: 33em;        
+    }
+
+    .topo-description {
+        width: 50%;
+        font-size: 1em;
+    }
+
+    .topo-title {
+        width: 40%;
+        font-size: 2.5em;
+    }
+
+    .botao-topo {
+        font-size: 0.9em;
+        padding: 1em 1.8em;
+    }
+
+    .all-courses {
+        margin-top: 5em;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "checkout curso-animation curso-design"
+        "curso-photo curso-crypto curso-business"
+        ;
+    }
+
+    .course-description {
+        font-size: 1em;
+    }
+
+    .title-course {
+        font-size: 1.2em;
+    }
+
+    .get-started-link {
+        font-size: 1em;
+    }
+
+
+
+
 }
